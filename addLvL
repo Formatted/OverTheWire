@@ -1,0 +1,23 @@
+#!/bin/bash
+
+lastLevel=$(wc -l levels | awk '{print $1}')
+# echo $lastLevel
+newLevel=$(($lastLevel+1))
+# echo $newLevel
+
+# get clipboard
+newPWD=$(echo `pbpaste`)
+
+if [ -z "$newPWD" ]
+then
+      echo "noting in clipboard..."
+else
+      # echo $newPWD
+      echo "lvl$newLevel $newPWD" >> levels
+
+      echo $newPWD
+      echo "^^ was put in levels file"
+      echo
+      cat levels
+fi
+

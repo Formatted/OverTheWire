@@ -1,0 +1,9 @@
+#!/bin/bash
+
+lastLevel=$(wc -l levels | awk '{print $1}')
+
+awk "/lvl$lastLevel/ { print }" levels | awk '{print $2}' | pbcopy
+
+ssh bandit$lastLevel@bandit.labs.overthewire.org -p 2220
+
+
