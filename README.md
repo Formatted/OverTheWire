@@ -1,6 +1,9 @@
 # OverTheWire
-Keep track of your progress
+Keep track of your progress 
 
+http://overthewire.org/wargames/bandit/
+
+# How
 Use `./start` to get the latest level's code from `levels`
 You just need to hit paste after connecting to the server
 After solving / finding the PWD copy it to your clipboard
